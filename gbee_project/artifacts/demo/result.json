@@ -1,0 +1,328 @@
+{
+  "seed": 7,
+  "initial_expression": "x1",
+  "operators": [
+    "+",
+    "*",
+    "sin"
+  ],
+  "config": {
+    "epochs": 40,
+    "episodes_per_batch": 16,
+    "horizon": 5,
+    "learning_rate": 0.001,
+    "entropy_coefficient": 0.01,
+    "baseline_decay": 0.9,
+    "max_grad_norm": 1.0,
+    "target_mse": 1e-12,
+    "seed": 7
+  },
+  "epochs_completed": 40,
+  "episodes": 640,
+  "best_sampled": {
+    "expression": "((((x1 + (x2 * 0.189583164963)) * 1.25112131311) + ((x1 + (x2 * 0.189583164963)) * 1.25112131311)) + (x2 * 0.189583164963))",
+    "train_mse": 0.022731413143321454,
+    "test_mse": 0.025555742542344342,
+    "reward": 0.9587738193515956,
+    "complexity": 19,
+    "graph": {
+      "schema_version": 1,
+      "root": 8,
+      "nodes": [
+        {
+          "kind": "var",
+          "op": null,
+          "args": [],
+          "var_index": 0,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "var",
+          "op": null,
+          "args": [],
+          "var_index": 1,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "const",
+          "op": null,
+          "args": [],
+          "var_index": null,
+          "value": 0.18958316496255284,
+          "parameter": "c1"
+        },
+        {
+          "kind": "op",
+          "op": "*",
+          "args": [
+            1,
+            2
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "op",
+          "op": "+",
+          "args": [
+            0,
+            3
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "const",
+          "op": null,
+          "args": [],
+          "var_index": null,
+          "value": 1.2511213131062344,
+          "parameter": "c0"
+        },
+        {
+          "kind": "op",
+          "op": "*",
+          "args": [
+            4,
+            5
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "op",
+          "op": "+",
+          "args": [
+            6,
+            6
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "op",
+          "op": "+",
+          "args": [
+            7,
+            3
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        }
+      ]
+    }
+  },
+  "greedy_policy": {
+    "expression": "(x1 + 0.00481336369197)",
+    "train_mse": 3.6657302189902787,
+    "test_mse": 3.5196246214210714,
+    "reward": 0.20932872306457795,
+    "complexity": 5,
+    "graph": {
+      "schema_version": 1,
+      "root": 2,
+      "nodes": [
+        {
+          "kind": "var",
+          "op": null,
+          "args": [],
+          "var_index": 0,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "const",
+          "op": null,
+          "args": [],
+          "var_index": null,
+          "value": 0.004813363691966017,
+          "parameter": "c0"
+        },
+        {
+          "kind": "op",
+          "op": "+",
+          "args": [
+            0,
+            1
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        }
+      ]
+    }
+  },
+  "beam_refinement": {
+    "expression": "((x1 * 2.49999999974) + sin(x2))",
+    "train_mse": 9.075677562442033e-20,
+    "test_mse": 8.814730593586022e-20,
+    "reward": 0.989,
+    "complexity": 11,
+    "graph": {
+      "schema_version": 1,
+      "root": 5,
+      "nodes": [
+        {
+          "kind": "var",
+          "op": null,
+          "args": [],
+          "var_index": 0,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "const",
+          "op": null,
+          "args": [],
+          "var_index": null,
+          "value": 2.4999999997425593,
+          "parameter": "c0"
+        },
+        {
+          "kind": "op",
+          "op": "*",
+          "args": [
+            0,
+            1
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "var",
+          "op": null,
+          "args": [],
+          "var_index": 1,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "op",
+          "op": "sin",
+          "args": [
+            3
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "op",
+          "op": "+",
+          "args": [
+            2,
+            4
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        }
+      ]
+    },
+    "config": {
+      "width": 8,
+      "depth": 3,
+      "proposal_limit": 0,
+      "target_mse": 1e-12
+    },
+    "expanded": 17,
+    "evaluated": 604,
+    "depth_reached": 3,
+    "note": "Separate bounded beam inference, not an RL recovery claim. With proposal_limit=0 all legal proposals are evaluated."
+  },
+  "final_selected": {
+    "expression": "((x1 * 2.49999999974) + sin(x2))",
+    "train_mse": 9.075677562442033e-20,
+    "test_mse": 8.814730593586022e-20,
+    "reward": 0.989,
+    "complexity": 11,
+    "graph": {
+      "schema_version": 1,
+      "root": 5,
+      "nodes": [
+        {
+          "kind": "var",
+          "op": null,
+          "args": [],
+          "var_index": 0,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "const",
+          "op": null,
+          "args": [],
+          "var_index": null,
+          "value": 2.4999999997425593,
+          "parameter": "c0"
+        },
+        {
+          "kind": "op",
+          "op": "*",
+          "args": [
+            0,
+            1
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "var",
+          "op": null,
+          "args": [],
+          "var_index": 1,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "op",
+          "op": "sin",
+          "args": [
+            3
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        },
+        {
+          "kind": "op",
+          "op": "+",
+          "args": [
+            2,
+            4
+          ],
+          "var_index": null,
+          "value": 0.0,
+          "parameter": null
+        }
+      ]
+    },
+    "stage": "beam_refinement",
+    "selection_criterion": "maximum training reward; no test-data selection"
+  },
+  "constant_optimizer_sanity_check": {
+    "purpose": "known-topology constant-fitting check, excluded from RL",
+    "expression": "((x1 * 2.50000000434) + sin(x2))",
+    "mse": 2.582524073980824e-17,
+    "nfev": 9,
+    "success": true
+  },
+  "fit_calls": 707,
+  "fit_cache_hits": 1756,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.15.0+cpu",
+    "torch_geometric": "2.8.1"
+  }
+}

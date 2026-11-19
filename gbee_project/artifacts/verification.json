@@ -1,0 +1,562 @@
+{
+  "verified_date": "2026-11-02",
+  "tests": {
+    "command": "python -m pytest -q",
+    "passed": 59,
+    "failed": 0,
+    "seconds": 6.52,
+    "warnings": [
+      "Upstream torch.jit.script FutureWarning"
+    ]
+  },
+  "lint": {
+    "command": "python -m ruff check .",
+    "result": "passed"
+  },
+  "editable_install": {
+    "command": "python -m pip install --no-deps --no-build-isolation -e .",
+    "result": "passed"
+  },
+  "demo_command": "python -m examples.demo --epochs 40 --seed 7",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.15.0+cpu",
+    "torch_geometric": "2.8.1"
+  },
+  "final_demo": {
+    "seed": 7,
+    "epochs_completed": 40,
+    "episodes": 640,
+    "best_sampled": {
+      "expression": "((((x1 + (x2 * 0.189583164963)) * 1.25112131311) + ((x1 + (x2 * 0.189583164963)) * 1.25112131311)) + (x2 * 0.189583164963))",
+      "train_mse": 0.022731413143321454,
+      "test_mse": 0.025555742542344342,
+      "reward": 0.9587738193515956,
+      "complexity": 19,
+      "graph": {
+        "schema_version": 1,
+        "root": 8,
+        "nodes": [
+          {
+            "kind": "var",
+            "op": null,
+            "args": [],
+            "var_index": 0,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "var",
+            "op": null,
+            "args": [],
+            "var_index": 1,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "const",
+            "op": null,
+            "args": [],
+            "var_index": null,
+            "value": 0.18958316496255284,
+            "parameter": "c1"
+          },
+          {
+            "kind": "op",
+            "op": "*",
+            "args": [
+              1,
+              2
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "op",
+            "op": "+",
+            "args": [
+              0,
+              3
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "const",
+            "op": null,
+            "args": [],
+            "var_index": null,
+            "value": 1.2511213131062344,
+            "parameter": "c0"
+          },
+          {
+            "kind": "op",
+            "op": "*",
+            "args": [
+              4,
+              5
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "op",
+            "op": "+",
+            "args": [
+              6,
+              6
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "op",
+            "op": "+",
+            "args": [
+              7,
+              3
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          }
+        ]
+      }
+    },
+    "greedy_policy": {
+      "expression": "(x1 + 0.00481336369197)",
+      "train_mse": 3.6657302189902787,
+      "test_mse": 3.5196246214210714,
+      "reward": 0.20932872306457795,
+      "complexity": 5,
+      "graph": {
+        "schema_version": 1,
+        "root": 2,
+        "nodes": [
+          {
+            "kind": "var",
+            "op": null,
+            "args": [],
+            "var_index": 0,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "const",
+            "op": null,
+            "args": [],
+            "var_index": null,
+            "value": 0.004813363691966017,
+            "parameter": "c0"
+          },
+          {
+            "kind": "op",
+            "op": "+",
+            "args": [
+              0,
+              1
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          }
+        ]
+      }
+    },
+    "beam_refinement": {
+      "expression": "((x1 * 2.49999999974) + sin(x2))",
+      "train_mse": 9.075677562442033e-20,
+      "test_mse": 8.814730593586022e-20,
+      "reward": 0.989,
+      "complexity": 11,
+      "graph": {
+        "schema_version": 1,
+        "root": 5,
+        "nodes": [
+          {
+            "kind": "var",
+            "op": null,
+            "args": [],
+            "var_index": 0,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "const",
+            "op": null,
+            "args": [],
+            "var_index": null,
+            "value": 2.4999999997425593,
+            "parameter": "c0"
+          },
+          {
+            "kind": "op",
+            "op": "*",
+            "args": [
+              0,
+              1
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "var",
+            "op": null,
+            "args": [],
+            "var_index": 1,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "op",
+            "op": "sin",
+            "args": [
+              3
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "op",
+            "op": "+",
+            "args": [
+              2,
+              4
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          }
+        ]
+      },
+      "config": {
+        "width": 8,
+        "depth": 3,
+        "proposal_limit": 0,
+        "target_mse": 1e-12
+      },
+      "expanded": 17,
+      "evaluated": 604,
+      "depth_reached": 3,
+      "note": "Separate bounded beam inference, not an RL recovery claim. With proposal_limit=0 all legal proposals are evaluated."
+    },
+    "final_selected": {
+      "expression": "((x1 * 2.49999999974) + sin(x2))",
+      "train_mse": 9.075677562442033e-20,
+      "test_mse": 8.814730593586022e-20,
+      "reward": 0.989,
+      "complexity": 11,
+      "graph": {
+        "schema_version": 1,
+        "root": 5,
+        "nodes": [
+          {
+            "kind": "var",
+            "op": null,
+            "args": [],
+            "var_index": 0,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "const",
+            "op": null,
+            "args": [],
+            "var_index": null,
+            "value": 2.4999999997425593,
+            "parameter": "c0"
+          },
+          {
+            "kind": "op",
+            "op": "*",
+            "args": [
+              0,
+              1
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "var",
+            "op": null,
+            "args": [],
+            "var_index": 1,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "op",
+            "op": "sin",
+            "args": [
+              3
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          },
+          {
+            "kind": "op",
+            "op": "+",
+            "args": [
+              2,
+              4
+            ],
+            "var_index": null,
+            "value": 0.0,
+            "parameter": null
+          }
+        ]
+      },
+      "stage": "beam_refinement",
+      "selection_criterion": "maximum training reward; no test-data selection"
+    }
+  },
+  "reinforce_sensitivity_checks": [
+    {
+      "seed": 7,
+      "epochs": 120,
+      "episodes": 1920,
+      "grammar": [
+        "+",
+        "*",
+        "sin"
+      ],
+      "best_sampled": {
+        "expression": "((x1 * 2.50224261038) + (x2 * 0.663966260956))",
+        "train_mse": 0.022731413143320424,
+        "test_mse": 0.02555574323398107,
+        "reward": 0.9647738193515965,
+        "complexity": 13,
+        "graph": {
+          "schema_version": 1,
+          "root": 6,
+          "nodes": [
+            {
+              "kind": "var",
+              "op": null,
+              "args": [],
+              "var_index": 0,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "const",
+              "op": null,
+              "args": [],
+              "var_index": null,
+              "value": 2.50224261037863,
+              "parameter": "c0"
+            },
+            {
+              "kind": "op",
+              "op": "*",
+              "args": [
+                0,
+                1
+              ],
+              "var_index": null,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "var",
+              "op": null,
+              "args": [],
+              "var_index": 1,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "const",
+              "op": null,
+              "args": [],
+              "var_index": null,
+              "value": 0.6639662609559684,
+              "parameter": "c1"
+            },
+            {
+              "kind": "op",
+              "op": "*",
+              "args": [
+                3,
+                4
+              ],
+              "var_index": null,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "op",
+              "op": "+",
+              "args": [
+                2,
+                5
+              ],
+              "var_index": null,
+              "value": 0.0,
+              "parameter": null
+            }
+          ]
+        }
+      },
+      "greedy_policy": {
+        "expression": "(((((x1 * 1.55467097442) * 1.01041471622) * 1.01217061558) * 1.55467097442) * 1.01041471622)",
+        "train_mse": 0.5943293049075097,
+        "test_mse": 0.5951554759499038
+      },
+      "note": "Exploratory 120-epoch REINFORCE run without beam refinement; none recovered the target exactly."
+    },
+    {
+      "seed": 0,
+      "epochs": 120,
+      "episodes": 1920,
+      "grammar": [
+        "+",
+        "*",
+        "sin"
+      ],
+      "best_sampled": {
+        "expression": "((x1 * 2.4011680282) + 0.103170226321)",
+        "train_mse": 0.5920688690881686,
+        "test_mse": 0.6048142449152849,
+        "reward": 0.6191135316544024,
+        "complexity": 9,
+        "graph": {
+          "schema_version": 1,
+          "root": 4,
+          "nodes": [
+            {
+              "kind": "var",
+              "op": null,
+              "args": [],
+              "var_index": 0,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "const",
+              "op": null,
+              "args": [],
+              "var_index": null,
+              "value": 2.40116802819675,
+              "parameter": "c0"
+            },
+            {
+              "kind": "op",
+              "op": "*",
+              "args": [
+                0,
+                1
+              ],
+              "var_index": null,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "const",
+              "op": null,
+              "args": [],
+              "var_index": null,
+              "value": 0.10317022632110376,
+              "parameter": "c1"
+            },
+            {
+              "kind": "op",
+              "op": "+",
+              "args": [
+                2,
+                3
+              ],
+              "var_index": null,
+              "value": 0.0,
+              "parameter": null
+            }
+          ]
+        }
+      },
+      "greedy_policy": {
+        "expression": "(x1 + x1)",
+        "train_mse": 0.8462455599439851,
+        "test_mse": 0.8639376904001979
+      },
+      "note": "Exploratory 120-epoch REINFORCE run without beam refinement; none recovered the target exactly."
+    },
+    {
+      "seed": 42,
+      "epochs": 120,
+      "episodes": 1920,
+      "grammar": [
+        "+",
+        "*",
+        "sin"
+      ],
+      "best_sampled": {
+        "expression": "((x1 + x1) + x2)",
+        "train_mse": 0.4619702037183519,
+        "test_mse": 0.524862795379806,
+        "reward": 0.676008468473992,
+        "complexity": 8,
+        "graph": {
+          "schema_version": 1,
+          "root": 3,
+          "nodes": [
+            {
+              "kind": "var",
+              "op": null,
+              "args": [],
+              "var_index": 0,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "op",
+              "op": "+",
+              "args": [
+                0,
+                0
+              ],
+              "var_index": null,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "var",
+              "op": null,
+              "args": [],
+              "var_index": 1,
+              "value": 0.0,
+              "parameter": null
+            },
+            {
+              "kind": "op",
+              "op": "+",
+              "args": [
+                1,
+                2
+              ],
+              "var_index": null,
+              "value": 0.0,
+              "parameter": null
+            }
+          ]
+        }
+      },
+      "greedy_policy": {
+        "expression": "(x1 + x1)",
+        "train_mse": 0.9967089913885739,
+        "test_mse": 0.9531255725721844
+      },
+      "note": "Exploratory 120-epoch REINFORCE run without beam refinement; none recovered the target exactly."
+    }
+  ],
+  "interpretation": "Exact target recovered by separate bounded beam inference. The short REINFORCE-only runs did not recover it. No held-out data were used for fitting, selection or beam expansion."
+}

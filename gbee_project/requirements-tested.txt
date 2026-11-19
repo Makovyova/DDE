@@ -1,0 +1,8 @@
+# Exact versions used for the delivered verification run.
+# Install CPU torch first using the command in README.md.
+numpy==2.3.5
+scipy==1.17.0
+torch==2.15.0+cpu
+torch-geometric==2.8.1
+pytest==9.2.0
+ruff==0.17.3

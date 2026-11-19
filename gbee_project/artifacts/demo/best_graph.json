@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "root": 5,
+  "nodes": [
+    {
+      "kind": "var",
+      "op": null,
+      "args": [],
+      "var_index": 0,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "const",
+      "op": null,
+      "args": [],
+      "var_index": null,
+      "value": 2.4999999997425593,
+      "parameter": "c0"
+    },
+    {
+      "kind": "op",
+      "op": "*",
+      "args": [
+        0,
+        1
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "var",
+      "op": null,
+      "args": [],
+      "var_index": 1,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "op",
+      "op": "sin",
+      "args": [
+        3
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "op",
+      "op": "+",
+      "args": [
+        2,
+        4
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    }
+  ]
+}

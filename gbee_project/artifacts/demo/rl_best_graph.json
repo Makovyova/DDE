@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "root": 8,
+  "nodes": [
+    {
+      "kind": "var",
+      "op": null,
+      "args": [],
+      "var_index": 0,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "var",
+      "op": null,
+      "args": [],
+      "var_index": 1,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "const",
+      "op": null,
+      "args": [],
+      "var_index": null,
+      "value": 0.18958316496255284,
+      "parameter": "c1"
+    },
+    {
+      "kind": "op",
+      "op": "*",
+      "args": [
+        1,
+        2
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "op",
+      "op": "+",
+      "args": [
+        0,
+        3
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "const",
+      "op": null,
+      "args": [],
+      "var_index": null,
+      "value": 1.2511213131062344,
+      "parameter": "c0"
+    },
+    {
+      "kind": "op",
+      "op": "*",
+      "args": [
+        4,
+        5
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "op",
+      "op": "+",
+      "args": [
+        6,
+        6
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    },
+    {
+      "kind": "op",
+      "op": "+",
+      "args": [
+        7,
+        3
+      ],
+      "var_index": null,
+      "value": 0.0,
+      "parameter": null
+    }
+  ]
+}
