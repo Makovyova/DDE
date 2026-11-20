@@ -20,9 +20,9 @@
   "epochs_completed": 40,
   "episodes": 640,
   "best_sampled": {
-    "expression": "((((x1 + (x2 * 0.189583164963)) * 1.25112131311) + ((x1 + (x2 * 0.189583164963)) * 1.25112131311)) + (x2 * 0.189583164963))",
-    "train_mse": 0.022731413143321454,
-    "test_mse": 0.025555742542344342,
+    "expression": "((((x1 + (x2 * 0.189583164969)) * 1.25112131315) + ((x1 + (x2 * 0.189583164969)) * 1.25112131315)) + (x2 * 0.189583164969))",
+    "train_mse": 0.022731413143321444,
+    "test_mse": 0.025555742541520193,
     "reward": 0.9587738193515956,
     "complexity": 19,
     "graph": {
@@ -50,7 +50,7 @@
           "op": null,
           "args": [],
           "var_index": null,
-          "value": 0.18958316496255284,
+          "value": 0.1895831649692961,
           "parameter": "c1"
         },
         {
@@ -80,7 +80,7 @@
           "op": null,
           "args": [],
           "var_index": null,
-          "value": 1.2511213131062344,
+          "value": 1.2511213131532826,
           "parameter": "c0"
         },
         {
@@ -161,8 +161,8 @@
   },
   "beam_refinement": {
     "expression": "((x1 * 2.49999999974) + sin(x2))",
-    "train_mse": 9.075677562442033e-20,
-    "test_mse": 8.814730593586022e-20,
+    "train_mse": 9.024647421163512e-20,
+    "test_mse": 8.765170244345873e-20,
     "reward": 0.989,
     "complexity": 11,
     "graph": {
@@ -182,7 +182,7 @@
           "op": null,
           "args": [],
           "var_index": null,
-          "value": 2.4999999997425593,
+          "value": 2.499999999743284,
           "parameter": "c0"
         },
         {
@@ -234,14 +234,14 @@
       "target_mse": 1e-12
     },
     "expanded": 17,
-    "evaluated": 604,
+    "evaluated": 603,
     "depth_reached": 3,
     "note": "Separate bounded beam inference, not an RL recovery claim. With proposal_limit=0 all legal proposals are evaluated."
   },
   "final_selected": {
     "expression": "((x1 * 2.49999999974) + sin(x2))",
-    "train_mse": 9.075677562442033e-20,
-    "test_mse": 8.814730593586022e-20,
+    "train_mse": 9.024647421163512e-20,
+    "test_mse": 8.765170244345873e-20,
     "reward": 0.989,
     "complexity": 11,
     "graph": {
@@ -261,7 +261,7 @@
           "op": null,
           "args": [],
           "var_index": null,
-          "value": 2.4999999997425593,
+          "value": 2.499999999743284,
           "parameter": "c0"
         },
         {
@@ -312,17 +312,17 @@
   "constant_optimizer_sanity_check": {
     "purpose": "known-topology constant-fitting check, excluded from RL",
     "expression": "((x1 * 2.50000000434) + sin(x2))",
-    "mse": 2.582524073980824e-17,
+    "mse": 2.5825240776146747e-17,
     "nfev": 9,
     "success": true
   },
-  "fit_calls": 707,
-  "fit_cache_hits": 1756,
+  "fit_calls": 710,
+  "fit_cache_hits": 1752,
   "versions": {
-    "python": "3.12.14",
-    "numpy": "2.3.5",
-    "scipy": "1.17.0",
-    "torch": "2.15.0+cpu",
+    "python": "3.14.4",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "torch": "2.11.0+cpu",
     "torch_geometric": "2.8.1"
   }
 }
